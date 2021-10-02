@@ -12,5 +12,7 @@ namespace Key_Castle_Utility
         public const string AdminRole = "Admin";
         public const string BuyerRole = "Buyer";
         public const string SellerRole = "Seller";
+
+        public const string CategoryName = "Category";
     }
 }

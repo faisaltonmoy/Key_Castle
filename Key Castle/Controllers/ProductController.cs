@@ -1,4 +1,5 @@
-﻿using Key_Castle_Models;
+﻿using Key_Castle_DataAccess.Repo.IRepository;
+using Key_Castle_Models;
 using Key_Castle_Utility;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
@@ -16,21 +17,21 @@ namespace Key_Castle.Controllers
     [Authorize(Roles = WC.AdminRole)]
     public class ProductController : Controller
     {
-        private readonly Key_Castle_DataAccess.ApplicationDbContext _db;
+        private readonly IProductRepository _prodRepo;
         private readonly IWebHostEnvironment _webHostEnvironment;
-        public ProductController(Key_Castle_DataAccess.ApplicationDbContext db, IWebHostEnvironment webHostEnvironment)
+        public ProductController(IProductRepository prodRepo, IWebHostEnvironment webHostEnvironment)
         {
-            _db = db;
+            _prodRepo = prodRepo;
             _webHostEnvironment = webHostEnvironment;
         }
         public IActionResult ProductCon()
         {
-            IEnumerable<Product> objList = _db.Product;
+            IEnumerable<Product> objList = _prodRepo.GetAll(includeProperties: "Category");
 
-            foreach (var obj in objList)
-            {
-                obj.Category = _db.Category.FirstOrDefault(u => u.Category_id == obj.Product_id);
-            };
+            //foreach (var obj in objList)
+            //{
+            //    obj.Pr = _prodRepo.FirstOrDefault(u => u.Category_id == obj.Product_id);
+            //};
 
             return View(objList);
         }
@@ -40,11 +41,7 @@ namespace Key_Castle.Controllers
             ProductVM productVM = new ProductVM()
             {
                 Product = new Product(),
-                CategorySelectList = _db.Category.Select(i => new SelectListItem
-                {
-                    Text = i.Category_name,
-                    Value = i.Category_id.ToString()
-                })
+                CategorySelectList = _prodRepo.GetAllDropdownList(WC.CategoryName),
             };
             if (id == null)
             {
@@ -52,7 +49,7 @@ namespace Key_Castle.Controllers
             }
             else
             {
-                productVM.Product = _db.Product.Find(id);
+                productVM.Product = _prodRepo.Find(id.GetValueOrDefault());
                 if (productVM.Product == null)
                 {
                     return NotFound();
@@ -84,12 +81,12 @@ namespace Key_Castle.Controllers
 
                     productVM.Product.Product_photo = fileName + extension;
 
-                    _db.Product.Add(productVM.Product);
+                    _prodRepo.Add(productVM.Product);
                 }
                 else
                 {
                     //updating
-                    var objFromDb = _db.Product.AsNoTracking().FirstOrDefault(u => u.Product_id== productVM.Product.Product_id);
+                    var objFromDb = _prodRepo.FirstOrDefault(u => u.Product_id== productVM.Product.Product_id,isTracking:false);
 
                     if (files.Count > 0)
                     {
@@ -115,17 +112,13 @@ namespace Key_Castle.Controllers
                     {
                         productVM.Product.Product_photo = objFromDb.Product_photo;
                     }
-                    _db.Product.Update(productVM.Product);
+                    _prodRepo.Update(productVM.Product);
                 }
-                _db.SaveChanges();
+                _prodRepo.Save();
 
                 return RedirectToAction("ProductCon");
             }
-            productVM.CategorySelectList = _db.Category.Select(i => new SelectListItem
-            {
-                Text = i.Category_name,
-                Value = i.Category_id.ToString()
-            });
+            productVM.CategorySelectList = _prodRepo.GetAllDropdownList(WC.CategoryName);
             return View(productVM);
 
         }
@@ -136,7 +129,7 @@ namespace Key_Castle.Controllers
             {
                 return NotFound();
             }
-            Product product = _db.Product.Include(u => u.Category).FirstOrDefault(u => u.Product_id == id);
+            Product product = _prodRepo.FirstOrDefault(u => u.Product_id == id);
             if (product == null)
             {
                 return NotFound();
@@ -150,7 +143,7 @@ namespace Key_Castle.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult DeletePost(int? id)
         {
-            var obj = _db.Product.Find(id);
+            var obj = _prodRepo.Find(id.GetValueOrDefault());
             if (obj == null)
             {
                 return NotFound();
@@ -164,8 +157,8 @@ namespace Key_Castle.Controllers
             }
 
 
-            _db.Product.Remove(obj);
-            _db.SaveChanges();
+            _prodRepo.Remove(obj);
+            _prodRepo.Save();
 
             return RedirectToAction("ProductCon");
         }

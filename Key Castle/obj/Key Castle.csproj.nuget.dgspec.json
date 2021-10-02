@@ -207,6 +207,9 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
+              "E:\\Github\\Key_Castle\\KeyCastle_Utility\\Key_Castle_Utility.csproj": {
+                "projectPath": "E:\\Github\\Key_Castle\\KeyCastle_Utility\\Key_Castle_Utility.csproj"
+              },
               "E:\\Github\\Key_Castle\\Key_Castle_Models\\Key_Castle_Models.csproj": {
                 "projectPath": "E:\\Github\\Key_Castle\\Key_Castle_Models\\Key_Castle_Models.csproj"
               }

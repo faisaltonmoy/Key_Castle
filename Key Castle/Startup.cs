@@ -1,4 +1,6 @@
 using Key_Castle_DataAccess;
+using Key_Castle_DataAccess.Repo;
+using Key_Castle_DataAccess.Repo.IRepository;
 using Key_Castle_Utility;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -47,6 +49,9 @@ namespace Key_Castle
                 Options.Cookie.HttpOnly = true;
                 Options.Cookie.IsEssential = true;
             });
+
+            services.AddScoped<ICategoryRepository, CategoryRepository>();
+            services.AddScoped<IProductRepository, ProductRepository>();
             services.AddControllersWithViews();
         }
 

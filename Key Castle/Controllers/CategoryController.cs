@@ -1,4 +1,5 @@
-﻿using Key_Castle_Utility;
+﻿using Key_Castle_DataAccess.Repo.IRepository;
+using Key_Castle_Utility;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -11,14 +12,14 @@ namespace Key_Castle.Controllers
     [Authorize(Roles = WC.AdminRole)]
     public class CategoryController : Controller
     {
-        private readonly Key_Castle_DataAccess.ApplicationDbContext _db;
-        public CategoryController(Key_Castle_DataAccess.ApplicationDbContext db)
+        private readonly ICategoryRepository _catRepo;
+        public CategoryController(ICategoryRepository catRepo)
         {
-            _db = db;
+            _catRepo = catRepo;
         }
         public IActionResult CategoryCon()
         {
-            IEnumerable<Key_Castle_Models.Category> objList = (IEnumerable<Key_Castle_Models.Category>)_db.Category;
+            IEnumerable<Key_Castle_Models.Category> objList = (IEnumerable<Key_Castle_Models.Category>)_catRepo.GetAll();
 
             return View(objList);
         }
@@ -34,8 +35,8 @@ namespace Key_Castle.Controllers
         {
             if(ModelState.IsValid)
             {
-                _db.Category.Add(obj);
-                _db.SaveChanges();
+                _catRepo.Add(obj);
+                _catRepo.Save();
 
                 return RedirectToAction("CategoryCon");
             }
@@ -49,7 +50,7 @@ namespace Key_Castle.Controllers
             {
                 return NotFound();
             }
-            var obj = _db.Category.Find(id);
+            var obj = _catRepo.Find(id.GetValueOrDefault());
             if (obj == null)
             {
                 return NotFound();
@@ -64,8 +65,8 @@ namespace Key_Castle.Controllers
         {
             if (ModelState.IsValid)
             {
-                _db.Category.Update(obj);
-                _db.SaveChanges();
+                _catRepo.Update(obj);
+                _catRepo.Save();
 
                 return RedirectToAction("CategoryCon");
             }
@@ -79,7 +80,7 @@ namespace Key_Castle.Controllers
             {
                 return NotFound();
             }
-            var obj = _db.Category.Find(id);
+            var obj = _catRepo.Find(id.GetValueOrDefault());
             if (obj == null)
             {
                 return NotFound();
@@ -97,8 +98,8 @@ namespace Key_Castle.Controllers
             {
                 return NotFound();
             }
-                _db.Category.Remove(obj);
-                _db.SaveChanges();
+                _catRepo.Remove(obj);
+                _catRepo.Save();
 
                 return RedirectToAction("CategoryCon");
         }

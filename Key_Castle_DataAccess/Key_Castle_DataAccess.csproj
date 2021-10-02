@@ -12,6 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\KeyCastle_Utility\Key_Castle_Utility.csproj" />
     <ProjectReference Include="..\Key_Castle_Models\Key_Castle_Models.csproj" />
   </ItemGroup>
 

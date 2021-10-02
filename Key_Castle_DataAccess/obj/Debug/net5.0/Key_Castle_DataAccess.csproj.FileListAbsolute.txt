@@ -28,3 +28,5 @@ E:\Github\Key_Castle\Key_Castle_DataAccess\obj\Debug\net5.0\Key_Castle_DataAcces
 E:\Github\Key_Castle\Key_Castle_DataAccess\obj\Debug\net5.0\Key_Castle_DataAccess.dll
 E:\Github\Key_Castle\Key_Castle_DataAccess\obj\Debug\net5.0\ref\Key_Castle_DataAccess.dll
 E:\Github\Key_Castle\Key_Castle_DataAccess\obj\Debug\net5.0\Key_Castle_DataAccess.pdb
+E:\Github\Key_Castle\Key_Castle_DataAccess\bin\Debug\net5.0\Key_Castle_Utility.dll
+E:\Github\Key_Castle\Key_Castle_DataAccess\bin\Debug\net5.0\Key_Castle_Utility.pdb
