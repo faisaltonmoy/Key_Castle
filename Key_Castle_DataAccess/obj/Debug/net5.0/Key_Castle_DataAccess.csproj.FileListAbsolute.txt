@@ -1,0 +1,30 @@
+E:\SD 3.2\Key Castle\Key_Castle_DataAccess\obj\Debug\net5.0\Key_Castle_DataAccess.csproj.AssemblyReference.cache
+E:\SD 3.2\Key Castle\Key_Castle_DataAccess\obj\Debug\net5.0\Key_Castle_DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+E:\SD 3.2\Key Castle\Key_Castle_DataAccess\obj\Debug\net5.0\Key_Castle_DataAccess.AssemblyInfoInputs.cache
+E:\SD 3.2\Key Castle\Key_Castle_DataAccess\obj\Debug\net5.0\Key_Castle_DataAccess.AssemblyInfo.cs
+E:\SD 3.2\Key Castle\Key_Castle_DataAccess\obj\Debug\net5.0\Key_Castle_DataAccess.csproj.CoreCompileInputs.cache
+E:\SD 3.2\Key Castle\Key_Castle_DataAccess\bin\Debug\net5.0\Key_Castle_DataAccess.deps.json
+E:\SD 3.2\Key Castle\Key_Castle_DataAccess\bin\Debug\net5.0\Key_Castle_DataAccess.dll
+E:\SD 3.2\Key Castle\Key_Castle_DataAccess\bin\Debug\net5.0\ref\Key_Castle_DataAccess.dll
+E:\SD 3.2\Key Castle\Key_Castle_DataAccess\bin\Debug\net5.0\Key_Castle_DataAccess.pdb
+E:\SD 3.2\Key Castle\Key_Castle_DataAccess\bin\Debug\net5.0\Key_Castle_Models.dll
+E:\SD 3.2\Key Castle\Key_Castle_DataAccess\bin\Debug\net5.0\Key_Castle_Models.pdb
+E:\SD 3.2\Key Castle\Key_Castle_DataAccess\obj\Debug\net5.0\Key_Castle_DataAccess.csproj.CopyComplete
+E:\SD 3.2\Key Castle\Key_Castle_DataAccess\obj\Debug\net5.0\Key_Castle_DataAccess.dll
+E:\SD 3.2\Key Castle\Key_Castle_DataAccess\obj\Debug\net5.0\ref\Key_Castle_DataAccess.dll
+E:\SD 3.2\Key Castle\Key_Castle_DataAccess\obj\Debug\net5.0\Key_Castle_DataAccess.pdb
+E:\Github\Key_Castle\Key_Castle_DataAccess\bin\Debug\net5.0\Key_Castle_DataAccess.deps.json
+E:\Github\Key_Castle\Key_Castle_DataAccess\bin\Debug\net5.0\Key_Castle_DataAccess.dll
+E:\Github\Key_Castle\Key_Castle_DataAccess\bin\Debug\net5.0\ref\Key_Castle_DataAccess.dll
+E:\Github\Key_Castle\Key_Castle_DataAccess\bin\Debug\net5.0\Key_Castle_DataAccess.pdb
+E:\Github\Key_Castle\Key_Castle_DataAccess\bin\Debug\net5.0\Key_Castle_Models.dll
+E:\Github\Key_Castle\Key_Castle_DataAccess\bin\Debug\net5.0\Key_Castle_Models.pdb
+E:\Github\Key_Castle\Key_Castle_DataAccess\obj\Debug\net5.0\Key_Castle_DataAccess.csproj.AssemblyReference.cache
+E:\Github\Key_Castle\Key_Castle_DataAccess\obj\Debug\net5.0\Key_Castle_DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+E:\Github\Key_Castle\Key_Castle_DataAccess\obj\Debug\net5.0\Key_Castle_DataAccess.AssemblyInfoInputs.cache
+E:\Github\Key_Castle\Key_Castle_DataAccess\obj\Debug\net5.0\Key_Castle_DataAccess.AssemblyInfo.cs
+E:\Github\Key_Castle\Key_Castle_DataAccess\obj\Debug\net5.0\Key_Castle_DataAccess.csproj.CoreCompileInputs.cache
+E:\Github\Key_Castle\Key_Castle_DataAccess\obj\Debug\net5.0\Key_Castle_DataAccess.csproj.CopyComplete
+E:\Github\Key_Castle\Key_Castle_DataAccess\obj\Debug\net5.0\Key_Castle_DataAccess.dll
+E:\Github\Key_Castle\Key_Castle_DataAccess\obj\Debug\net5.0\ref\Key_Castle_DataAccess.dll
+E:\Github\Key_Castle\Key_Castle_DataAccess\obj\Debug\net5.0\Key_Castle_DataAccess.pdb

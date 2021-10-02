@@ -1,0 +1,24 @@
+E:\SD 3.2\Key Castle\KeyCastle_Utility\obj\Debug\net5.0\Key_Castle_Utility.csproj.AssemblyReference.cache
+E:\SD 3.2\Key Castle\KeyCastle_Utility\obj\Debug\net5.0\Key_Castle_Utility.GeneratedMSBuildEditorConfig.editorconfig
+E:\SD 3.2\Key Castle\KeyCastle_Utility\obj\Debug\net5.0\Key_Castle_Utility.AssemblyInfoInputs.cache
+E:\SD 3.2\Key Castle\KeyCastle_Utility\obj\Debug\net5.0\Key_Castle_Utility.AssemblyInfo.cs
+E:\SD 3.2\Key Castle\KeyCastle_Utility\obj\Debug\net5.0\Key_Castle_Utility.csproj.CoreCompileInputs.cache
+E:\SD 3.2\Key Castle\KeyCastle_Utility\bin\Debug\net5.0\Key_Castle_Utility.deps.json
+E:\SD 3.2\Key Castle\KeyCastle_Utility\bin\Debug\net5.0\Key_Castle_Utility.dll
+E:\SD 3.2\Key Castle\KeyCastle_Utility\bin\Debug\net5.0\ref\Key_Castle_Utility.dll
+E:\SD 3.2\Key Castle\KeyCastle_Utility\bin\Debug\net5.0\Key_Castle_Utility.pdb
+E:\SD 3.2\Key Castle\KeyCastle_Utility\obj\Debug\net5.0\Key_Castle_Utility.dll
+E:\SD 3.2\Key Castle\KeyCastle_Utility\obj\Debug\net5.0\ref\Key_Castle_Utility.dll
+E:\SD 3.2\Key Castle\KeyCastle_Utility\obj\Debug\net5.0\Key_Castle_Utility.pdb
+E:\Github\Key_Castle\KeyCastle_Utility\bin\Debug\net5.0\Key_Castle_Utility.deps.json
+E:\Github\Key_Castle\KeyCastle_Utility\bin\Debug\net5.0\Key_Castle_Utility.dll
+E:\Github\Key_Castle\KeyCastle_Utility\bin\Debug\net5.0\ref\Key_Castle_Utility.dll
+E:\Github\Key_Castle\KeyCastle_Utility\bin\Debug\net5.0\Key_Castle_Utility.pdb
+E:\Github\Key_Castle\KeyCastle_Utility\obj\Debug\net5.0\Key_Castle_Utility.csproj.AssemblyReference.cache
+E:\Github\Key_Castle\KeyCastle_Utility\obj\Debug\net5.0\Key_Castle_Utility.GeneratedMSBuildEditorConfig.editorconfig
+E:\Github\Key_Castle\KeyCastle_Utility\obj\Debug\net5.0\Key_Castle_Utility.AssemblyInfoInputs.cache
+E:\Github\Key_Castle\KeyCastle_Utility\obj\Debug\net5.0\Key_Castle_Utility.AssemblyInfo.cs
+E:\Github\Key_Castle\KeyCastle_Utility\obj\Debug\net5.0\Key_Castle_Utility.csproj.CoreCompileInputs.cache
+E:\Github\Key_Castle\KeyCastle_Utility\obj\Debug\net5.0\Key_Castle_Utility.dll
+E:\Github\Key_Castle\KeyCastle_Utility\obj\Debug\net5.0\ref\Key_Castle_Utility.dll
+E:\Github\Key_Castle\KeyCastle_Utility\obj\Debug\net5.0\Key_Castle_Utility.pdb

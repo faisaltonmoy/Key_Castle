@@ -1,0 +1,43 @@
+﻿@model IEnumerable<Key_Castle_Models.Buyer_Profile>
+
+<div class="container p-3">
+    <div class="row p-4">
+        <div class="col-6">
+            <h2 class="text-primary">Buyer's List</h2>
+        </div>
+    </div>
+</div>
+
+<br />
+<br />
+
+@if (Model.Count() > 0)
+{
+    <table class="table table-bordered table-striped" style="width:100%">
+        <thead>
+            <tr>
+                <th>Buyer Id</th>
+                <th>Full Name</th>
+                <th>Item Purchase</th>
+                <th>Photo</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var obj in Model)
+            {
+            <tr>
+                <td width="50%">@obj.Buyer_id</td>
+                <td width="30%">@obj.FullName</td>
+                <td width="50%">@obj.Item_purchase</td>
+                <td width="30%">@obj.Buyer_photo</td>
+            </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>Nothing</p>
+}
+
+
