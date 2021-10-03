@@ -10,3 +10,15 @@ E:\SD 3.2\Key Castle\Key_Castle_Models\bin\Debug\net5.0\Key_Castle_Models.pdb
 E:\SD 3.2\Key Castle\Key_Castle_Models\obj\Debug\net5.0\Key_Castle_Models.dll
 E:\SD 3.2\Key Castle\Key_Castle_Models\obj\Debug\net5.0\ref\Key_Castle_Models.dll
 E:\SD 3.2\Key Castle\Key_Castle_Models\obj\Debug\net5.0\Key_Castle_Models.pdb
+E:\Github\Key_Castle\Key_Castle_Models\bin\Debug\net5.0\Key_Castle_Models.deps.json
+E:\Github\Key_Castle\Key_Castle_Models\bin\Debug\net5.0\Key_Castle_Models.dll
+E:\Github\Key_Castle\Key_Castle_Models\bin\Debug\net5.0\ref\Key_Castle_Models.dll
+E:\Github\Key_Castle\Key_Castle_Models\bin\Debug\net5.0\Key_Castle_Models.pdb
+E:\Github\Key_Castle\Key_Castle_Models\obj\Debug\net5.0\Key_Castle_Models.csproj.AssemblyReference.cache
+E:\Github\Key_Castle\Key_Castle_Models\obj\Debug\net5.0\Key_Castle_Models.GeneratedMSBuildEditorConfig.editorconfig
+E:\Github\Key_Castle\Key_Castle_Models\obj\Debug\net5.0\Key_Castle_Models.AssemblyInfoInputs.cache
+E:\Github\Key_Castle\Key_Castle_Models\obj\Debug\net5.0\Key_Castle_Models.AssemblyInfo.cs
+E:\Github\Key_Castle\Key_Castle_Models\obj\Debug\net5.0\Key_Castle_Models.csproj.CoreCompileInputs.cache
+E:\Github\Key_Castle\Key_Castle_Models\obj\Debug\net5.0\Key_Castle_Models.dll
+E:\Github\Key_Castle\Key_Castle_Models\obj\Debug\net5.0\ref\Key_Castle_Models.dll
+E:\Github\Key_Castle\Key_Castle_Models\obj\Debug\net5.0\Key_Castle_Models.pdb

@@ -52,6 +52,9 @@ namespace Key_Castle
 
             services.AddScoped<ICategoryRepository, CategoryRepository>();
             services.AddScoped<IProductRepository, ProductRepository>();
+            services.AddScoped<IInquiryHeaderRepository, InquiryHeaderRepository>();
+            services.AddScoped<IInquiryDetailRepository, InquiryDetailRepository>();
+            services.AddScoped<IAppUserRepository, AppUserRepository>();
             services.AddControllersWithViews();
         }
 

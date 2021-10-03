@@ -137,6 +137,60 @@ namespace Key_Castle_DataAccess.Migrations
                     b.ToTable("Category");
                 });
 
+            modelBuilder.Entity("Key_Castle_Models.InquiryDetail", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("InquiryHeaderId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("InquiryHeaderId");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("InquiryDetail");
+                });
+
+            modelBuilder.Entity("Key_Castle_Models.InquiryHeader", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("ApplicationUserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FullName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("InquiryDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("PhoneNumber")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ApplicationUserId");
+
+                    b.ToTable("InquiryHeader");
+                });
+
             modelBuilder.Entity("Key_Castle_Models.Order", b =>
                 {
                     b.Property<int>("Order_id")
@@ -554,6 +608,34 @@ namespace Key_Castle_DataAccess.Migrations
                     b.Navigation("Buyer");
 
                     b.Navigation("Order");
+                });
+
+            modelBuilder.Entity("Key_Castle_Models.InquiryDetail", b =>
+                {
+                    b.HasOne("Key_Castle_Models.InquiryHeader", "InquiryHeader")
+                        .WithMany()
+                        .HasForeignKey("InquiryHeaderId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Key_Castle_Models.Product", "Product")
+                        .WithMany()
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("InquiryHeader");
+
+                    b.Navigation("Product");
+                });
+
+            modelBuilder.Entity("Key_Castle_Models.InquiryHeader", b =>
+                {
+                    b.HasOne("Key_Castle_Models.AppUser", "AppUser")
+                        .WithMany()
+                        .HasForeignKey("ApplicationUserId");
+
+                    b.Navigation("AppUser");
                 });
 
             modelBuilder.Entity("Key_Castle_Models.Order", b =>

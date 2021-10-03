@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using Key_Castle_Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -14,18 +15,20 @@ namespace Key_Castle_DataAccess
 
         }
 
-        public DbSet<Key_Castle_Models.Buyer> Buyer { get; set; }
-        public DbSet<Key_Castle_Models.Buyer_Profile> Buyer_Profile { get; set; }
-        public DbSet<Key_Castle_Models.Seller> Seller { get; set; }
-        public DbSet<Key_Castle_Models.Seller_Profile> Seller_Profile { get; set; }
-        public DbSet<Key_Castle_Models.Admin> Admin { get; set; }
-        public DbSet<Key_Castle_Models.Cart> Cart { get; set; }
-        public DbSet<Key_Castle_Models.Category> Category { get; set; }
-        public DbSet<Key_Castle_Models.Order> Order { get; set; }
-        public DbSet<Key_Castle_Models.Order_Details> Order_Details { get; set; }
-        public DbSet<Key_Castle_Models.Payment> Payment { get; set; }
-        public DbSet<Key_Castle_Models.Product> Product { get; set; }
-        public DbSet<Key_Castle_Models.AppUser> AppUser { get; set; }
+        public DbSet<Buyer> Buyer { get; set; }
+        public DbSet<Buyer_Profile> Buyer_Profile { get; set; }
+        public DbSet<Seller> Seller { get; set; }
+        public DbSet<Seller_Profile> Seller_Profile { get; set; }
+        public DbSet<Admin> Admin { get; set; }
+        public DbSet<Cart> Cart { get; set; }
+        public DbSet<Category> Category { get; set; }
+        public DbSet<Order> Order { get; set; }
+        public DbSet<Order_Details> Order_Details { get; set; }
+        public DbSet<Payment> Payment { get; set; }
+        public DbSet<Product> Product { get; set; }
+        public DbSet<AppUser> AppUser { get; set; }
+        public DbSet<InquiryHeader> InquiryHeader { get; set; }
+        public DbSet<InquiryDetail> InquiryDetail { get; set; }
 
     }
 }

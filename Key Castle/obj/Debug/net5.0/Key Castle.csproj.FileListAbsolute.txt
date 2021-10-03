@@ -995,3 +995,6 @@ E:\Github\Key_Castle\Key Castle\obj\Debug\net5.0\Key Castle.dll
 E:\Github\Key_Castle\Key Castle\obj\Debug\net5.0\ref\Key Castle.dll
 E:\Github\Key_Castle\Key Castle\obj\Debug\net5.0\Key Castle.pdb
 E:\Github\Key_Castle\Key Castle\obj\Debug\net5.0\Key Castle.genruntimeconfig.cache
+E:\Github\Key_Castle\Key Castle\obj\Debug\net5.0\Razor\Views\Cart\InquiryConfirmation.cshtml.g.cs
+E:\Github\Key_Castle\Key Castle\obj\Debug\net5.0\Razor\Views\Inquiry\InquiryCon.cshtml.g.cs
+E:\Github\Key_Castle\Key Castle\obj\Debug\net5.0\Razor\Views\Inquiry\Details.cshtml.g.cs
