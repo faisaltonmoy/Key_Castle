@@ -147,7 +147,13 @@ namespace Key_Castle_DataAccess.Migrations
                     b.Property<int>("InquiryHeaderId")
                         .HasColumnType("int");
 
+                    b.Property<double>("PricePerQnty")
+                        .HasColumnType("float");
+
                     b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Qnty")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -166,27 +172,41 @@ namespace Key_Castle_DataAccess.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("ApplicationUserId")
+                    b.Property<string>("CreatedByUserId")
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Email")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<double>("FinalOrderTotal")
+                        .HasColumnType("float");
 
                     b.Property<string>("FullName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("InquiryDate")
+                    b.Property<DateTime>("OrderDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("OrderStatus")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("PaymentDate")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("PhoneNumber")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<DateTime>("ShippingDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("TransactionId")
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("Id");
 
-                    b.HasIndex("ApplicationUserId");
+                    b.HasIndex("CreatedByUserId");
 
                     b.ToTable("InquiryHeader");
                 });
@@ -631,11 +651,11 @@ namespace Key_Castle_DataAccess.Migrations
 
             modelBuilder.Entity("Key_Castle_Models.InquiryHeader", b =>
                 {
-                    b.HasOne("Key_Castle_Models.AppUser", "AppUser")
+                    b.HasOne("Key_Castle_Models.AppUser", "CreatedBy")
                         .WithMany()
-                        .HasForeignKey("ApplicationUserId");
+                        .HasForeignKey("CreatedByUserId");
 
-                    b.Navigation("AppUser");
+                    b.Navigation("CreatedBy");
                 });
 
             modelBuilder.Entity("Key_Castle_Models.Order", b =>

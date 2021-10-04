@@ -14,5 +14,15 @@ namespace Key_Castle_Utility
         public const string SellerRole = "Seller";
 
         public const string CategoryName = "Category";
+
+        public const string Success = "Success";
+        public const string Error = "Error";
+
+        public const string StatusPending = "Pending";
+        public const string StatusApproved = "Approved";
+        public const string StatusInProcess = "Processing";
+        public const string StatusShipped = "Shipped";
+        public const string StatusCancelled = "Cancelled";
+        public const string StatusRefunded = "Refunded";
     }
 }

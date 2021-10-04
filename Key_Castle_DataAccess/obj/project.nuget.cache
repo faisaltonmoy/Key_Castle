@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "fd0r9ChCtB+Lm1XdIgQVZtdVYWmEnc/C2ncmq6ncYKotHVV82uM0A+cFL5rSrbh8rNojQ3U5ZNlSFHO1uEPeig==",
+  "dgSpecHash": "iYcHu77IFFo7U+YMmV+b7SQviQJe62UKiUKnbbZVSEbqxTVKQLfG8ORK1EqiDUXEf0Bc8IHb7anZeX+Q7j5gZQ==",
   "success": true,
   "projectFilePath": "E:\\Github\\Key_Castle\\Key_Castle_DataAccess\\Key_Castle_DataAccess.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\faisa\\.nuget\\packages\\braintree\\5.9.0\\braintree.5.9.0.nupkg.sha512",
     "C:\\Users\\faisa\\.nuget\\packages\\mailjet.api\\1.2.2\\mailjet.api.1.2.2.nupkg.sha512",
     "C:\\Users\\faisa\\.nuget\\packages\\microsoft.aspnetcore.antiforgery\\2.2.0\\microsoft.aspnetcore.antiforgery.2.2.0.nupkg.sha512",
     "C:\\Users\\faisa\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
@@ -175,7 +176,9 @@
     "C:\\Users\\faisa\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\faisa\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\faisa\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\faisa\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
+    "C:\\Users\\faisa\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
+    "C:\\Users\\faisa\\.nuget\\packages\\system.xml.xpath\\4.3.0\\system.xml.xpath.4.3.0.nupkg.sha512",
+    "C:\\Users\\faisa\\.nuget\\packages\\system.xml.xpath.xmldocument\\4.3.0\\system.xml.xpath.xmldocument.4.3.0.nupkg.sha512"
   ],
   "logs": []
 }

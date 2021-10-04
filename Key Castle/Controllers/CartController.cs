@@ -1,10 +1,13 @@
-﻿using Key_Castle_DataAccess.Repo;
+﻿using Braintree;
+using Key_Castle_DataAccess.Repo;
 using Key_Castle_DataAccess.Repo.IRepository;
 using Key_Castle_Models;
 using Key_Castle_Models.ViewModels;
 using Key_Castle_Utility;
+using Key_Castle_Utility.BrainTree;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -24,13 +27,14 @@ namespace Key_Castle_DataAccess.Controllers
         private readonly IProductRepository _prodRepo;
         private readonly IInquiryHeaderRepository _inqHRepo;
         private readonly IInquiryDetailRepository _inqDRepo;
+        private readonly IBrainTreeGate _brain;
 
         [BindProperty]
         public ProductUserVM ProductUserVM { get; set; }
 
         public CartController(IWebHostEnvironment webHostEnvironment, IEmailSender emailSender,
         IAppUserRepository userRepo, IProductRepository prodRepo,
-        IInquiryHeaderRepository inqHRepo, IInquiryDetailRepository inqDRepo)
+        IInquiryHeaderRepository inqHRepo, IInquiryDetailRepository inqDRepo, IBrainTreeGate brain)
         {
             _webHostEnvironment = webHostEnvironment;
             _emailSender = emailSender;
@@ -38,6 +42,7 @@ namespace Key_Castle_DataAccess.Controllers
             _prodRepo = prodRepo;
             _inqDRepo = inqDRepo;
             _inqHRepo = inqHRepo;
+            _brain = brain;
         }
         public IActionResult CartCon()
         {
@@ -87,6 +92,9 @@ namespace Key_Castle_DataAccess.Controllers
                 ProductList = prodList
             };
 
+            var gateway = _brain.GetGateway();
+            var clientToken = gateway.ClientToken.Generate();
+            ViewBag.ClientToken = clientToken;
 
             return View(ProductUserVM);
         }
@@ -94,19 +102,19 @@ namespace Key_Castle_DataAccess.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [ActionName("Summary")]
-        public IActionResult SummaryPost(ProductUserVM ProductUserVM)
+        public IActionResult SummaryPost(IFormCollection collection, ProductUserVM ProductUserVM)
         {
             var claimsIdentity = (ClaimsIdentity)User.Identity;
-            var claim = claimsIdentity.FindFirst(ClaimTypes.NameIdentifier); 
+            var claim = claimsIdentity.FindFirst(ClaimTypes.NameIdentifier);
 
 
             InquiryHeader inquiryHeader = new InquiryHeader()
             {
-                AppUserId = claim.Value,
+                CreatedByUserId = claim.Value,
                 FullName = ProductUserVM.AppUser.FullName,
                 Email = ProductUserVM.AppUser.Email,
                 PhoneNumber = ProductUserVM.AppUser.PhoneNumber,
-                InquiryDate = DateTime.Now
+                OrderDate = DateTime.Now
 
             };
 
@@ -124,6 +132,33 @@ namespace Key_Castle_DataAccess.Controllers
 
             }
             _inqDRepo.Save();
+
+            string nonceFromTheClient = collection["payment_method_nonce"];
+
+            var request = new TransactionRequest
+            {
+                Amount = Convert.ToDecimal(inquiryHeader.FinalOrderTotal),
+                PaymentMethodNonce = nonceFromTheClient,
+                OrderId = inquiryHeader.Id.ToString(),
+                Options = new TransactionOptionsRequest
+                {
+                    SubmitForSettlement = true
+                }
+            };
+
+            //var gateway = _brain.GetGateway();
+            //Result<Transaction> result = gateway.Transaction.Sale(request);
+
+            //if (result.Target.ProcessorResponseText == "Approved")
+            //{
+            //    inquiryHeader.TransactionId = result.Target.Id;
+            //    inquiryHeader.OrderStatus = WC.StatusApproved;
+            //}
+            //else
+            //{
+            //    inquiryHeader.OrderStatus = WC.StatusCancelled;
+            //}
+            _inqHRepo.Save();
 
             return RedirectToAction(nameof(InquiryConfirmation));
         }

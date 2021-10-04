@@ -23,6 +23,9 @@ namespace Key_Castle_Models
         [ForeignKey("ProductId")]
         public Product Product { get; set; }
 
+        public int Qnty { get; set; }
+        public double PricePerQnty { get; set; }
+
 
     }
 }

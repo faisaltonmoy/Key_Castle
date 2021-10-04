@@ -2,6 +2,7 @@ using Key_Castle_DataAccess;
 using Key_Castle_DataAccess.Repo;
 using Key_Castle_DataAccess.Repo.IRepository;
 using Key_Castle_Utility;
+using Key_Castle_Utility.BrainTree;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -49,7 +50,8 @@ namespace Key_Castle
                 Options.Cookie.HttpOnly = true;
                 Options.Cookie.IsEssential = true;
             });
-
+            services.Configure<BrainTreeSettings>(Configuration.GetSection("BrainTree"));
+            services.AddSingleton<IBrainTreeGate, BrainTreeGate>();
             services.AddScoped<ICategoryRepository, CategoryRepository>();
             services.AddScoped<IProductRepository, ProductRepository>();
             services.AddScoped<IInquiryHeaderRepository, InquiryHeaderRepository>();

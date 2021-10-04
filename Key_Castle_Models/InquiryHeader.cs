@@ -10,20 +10,27 @@ namespace Key_Castle_Models
 {
     public class InquiryHeader
     {
-        [Key]
-        public int Id { get; set; }
+            [Key]
+            public int Id { get; set; }
 
-        public string AppUserId { get; set; }
-        [ForeignKey("AppUserId")]
-        public AppUser AppUser { get; set; }
+            public string CreatedByUserId { get; set; }
+            [ForeignKey("CreatedByUserId")]
+            public AppUser CreatedBy { get; set; }
 
-        public DateTime InquiryDate { get; set; }
+            [Required]
+            public DateTime OrderDate { get; set; }
 
-        [Required]
-        public string PhoneNumber { get; set; }
-        [Required]
-        public string FullName { get; set; }
-        [Required]
-        public string Email { get; set; }
+            public DateTime ShippingDate { get; set; }
+            [Required]
+            public double FinalOrderTotal { get; set; }
+            public string OrderStatus { get; set; }
+            public DateTime PaymentDate { get; set; }
+            public string TransactionId { get; set; }
+
+            [Required]
+            public string PhoneNumber { get; set; }
+            [Required]
+            public string FullName { get; set; }
+            public string Email { get; set; }
     }
 }

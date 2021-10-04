@@ -43,7 +43,7 @@ namespace Key_Castle_Utility
       {
        "From",
        new JObject {
-        {"Email", "170204025@aust.edu"},
+        {"Email", "sevices.keycastle@gmail.com"},
         {"Name", "Admin"}
        }
       }, {

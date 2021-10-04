@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "f0wY727X6x+nTh7xt3wX9If6jXkrX1dVx8hDlXzq2tAnZu3s2ZKZg01SQG41FXzkOLkW62g2WipSM4VsB0PkFg==",
+  "dgSpecHash": "FceuORcBVYoCwdxdNboBnUCttqoHopxnTeoiaYenDNnxXkoaOI0NcjoIo3zWRpAQdxJNfHjNM02pw7aq+db4xw==",
   "success": true,
   "projectFilePath": "E:\\Github\\Key_Castle\\KeyCastle_Utility\\Key_Castle_Utility.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\faisa\\.nuget\\packages\\braintree\\5.9.0\\braintree.5.9.0.nupkg.sha512",
     "C:\\Users\\faisa\\.nuget\\packages\\mailjet.api\\1.2.2\\mailjet.api.1.2.2.nupkg.sha512",
     "C:\\Users\\faisa\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.9\\microsoft.aspnetcore.cryptography.internal.5.0.9.nupkg.sha512",
     "C:\\Users\\faisa\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\5.0.9\\microsoft.aspnetcore.cryptography.keyderivation.5.0.9.nupkg.sha512",
@@ -95,7 +96,10 @@
     "C:\\Users\\faisa\\.nuget\\packages\\system.threading.tasks.extensions\\4.3.0\\system.threading.tasks.extensions.4.3.0.nupkg.sha512",
     "C:\\Users\\faisa\\.nuget\\packages\\system.threading.timer\\4.3.0\\system.threading.timer.4.3.0.nupkg.sha512",
     "C:\\Users\\faisa\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
-    "C:\\Users\\faisa\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512"
+    "C:\\Users\\faisa\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
+    "C:\\Users\\faisa\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
+    "C:\\Users\\faisa\\.nuget\\packages\\system.xml.xpath\\4.3.0\\system.xml.xpath.4.3.0.nupkg.sha512",
+    "C:\\Users\\faisa\\.nuget\\packages\\system.xml.xpath.xmldocument\\4.3.0\\system.xml.xpath.xmldocument.4.3.0.nupkg.sha512"
   ],
   "logs": []
 }
