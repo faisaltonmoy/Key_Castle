@@ -28,8 +28,5 @@ namespace Key_Castle_Models
         [ForeignKey("Category_id")]
         public virtual Category Category { get; set; }
 
-        [NotMapped]
-        [Range(1, 10000, ErrorMessage = "Quantity must be greater than 0.")]
-        public int TempQty { get; set; }
     }
 }
