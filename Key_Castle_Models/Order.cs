@@ -9,7 +9,7 @@ namespace Key_Castle_Models
 {
     public class Order
     {
-        [Key]
+        [System.ComponentModel.DataAnnotations.Key]
 
         public int Order_id { get; set; }
 

@@ -10,7 +10,7 @@ namespace Key_Castle_Models
 {
     public class InquiryHeader
     {
-            [Key]
+            [System.ComponentModel.DataAnnotations.Key]
             public int Id { get; set; }
 
             public string CreatedByUserId { get; set; }

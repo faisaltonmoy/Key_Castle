@@ -9,7 +9,7 @@ namespace Key_Castle_Models
 {
     public class Seller_Profile
     {
-        [Key]
+        [System.ComponentModel.DataAnnotations.Key]
         public int Seller_pro_id { get; set; }
 
         public string ShopName { get; set; }

@@ -2,56 +2,59 @@
 @using Key_Castle_Utility
 
 
-<form method="post">
+<form method="post" style="border-radius:10px; box-shadow: 0px 0px 10px 0px #808080;">
 
     <input asp-for="Product_id" hidden />
 
-    <div class="border p-3 bg-white">
+    <div class="border p-3 bg-white ">
 
         <div class="form-group row">
-            <h2 class="text-info pl-3">Delete Product</h2>
+            <h2 class="text-info pl-3 text-center">Delete Product</h2>
         </div>
-        <div class="row">
+        <div class="row ml-2">
             <div class="col-8">
                 <div class="form-group row py-2">
-                    <div class="col-4">
-                        <label asp-for="Product_name"></label>
+                    <div class="col-2">
+                        <label style="color:black;" asp-for="Product_name"></label>
                     </div>
                     <div class="col-8">
-                        <input asp-for="Product_name" disabled class="form-control" />
+                        <input  style="color:black;" asp-for="Product_name" disabled class="form-control" />
                     </div>
 
                 </div>
                 <div class="form-group row py-2">
-                    <div class="col-4">
-                        <label asp-for="Price"></label>
+                    <div class="col-2">
+                        <label style="color:black;" asp-for="Price"></label>
                     </div>
                     <div class="col-8">
-                        <input asp-for="Price" disabled class="form-control" />
+                        <input style="color:black;" asp-for="Price" disabled class="form-control" />
                     </div>
 
                 </div>
                 <div class="form-group row py-2">
-                    <div class="col-4">
+                    <div style="color:black;" class="col-2">
                         <label asp-for="Desc"></label>
                     </div>
-                    <div class="col-8">
+                    <div style="color:black;" class="col-8">
                         <textarea asp-for="Desc" class="form-control summernote"></textarea>
                     </div>
 
                 </div>
 
                 <div class="form-group row py-2">
-                    <div class="col-4">
-                        <label asp-for="Category_id"></label>
+                    <div style="color:black;" class="col-2">
+                        <label style="color:black;" asp-for="Category_id"></label>
                     </div>
+
                     <div class="col-8">
-                        <input asp-for="Category.Category_name" disabled class="form-control" />
+                        <input style="color:black;" asp-for="Category_id" disabled class="form-control" />
                     </div>
+
+                   
 
                 </div>
                 <div class="form-group row py-2">
-                    <div class="col-8 offset-4 row">
+                    <div class="col-8 offset-2 row">
 
                         <div class="col">
 
@@ -65,7 +68,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-4 ">
+            <div class="col-3 ">
                 @* Keep this empty *@
                 @if (Model.Product_id != 0)
                 {

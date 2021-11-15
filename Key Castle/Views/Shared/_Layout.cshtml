@@ -7,9 +7,59 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Key Castle</title>
+    <title>@ViewData["Title"] - Key Castle </title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.min.css">
+    <link rel="stylesheet" href="css/owl.transitions.css">
+    <link rel="stylesheet" href="css/flexslider.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.css">
+
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/font-icon.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+    <link rel="stylesheet" href="~/Product_style/css/main.css">
+    <link rel="stylesheet" href="~/Product_style/css/simple-line-icons.css">
+    <link rel="stylesheet" href="~/Product_style/css/slicknav.css">
+    <link rel="stylesheet" href="~/Product_style/css/owl.carousel.css">
+    <link rel="stylesheet" href="~/Product_style/css/owl.theme.css">
+    <link rel="stylesheet" href="~/Product_style/css/animate.css">
+    <link rel="stylesheet" href="~/Product_style/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/Product_style/css/main.css">
+
+
+    <link rel="stylesheet" href="~/Login_style/fonts/icomoon/style.css">
+    <link rel="stylesheet" href="~/Login_style/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/Login_style/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/Login_style/css/style.css">
+
+
+    <!-- Custom-Files -->
+    <link rel="stylesheet" href="~/Team&header/css/bootstrap.css">
+    <!-- Bootstrap-Core-CSS -->
+    <link rel="stylesheet" href="~/Team&header/css/lightbox.css">
+    <!-- lightbox css -->
+    <!-- Style-CSS -->
+    <link rel="stylesheet" href="~/Team&header/css/lightbox.css">
+    <!-- Font-Awesome-Icons-CSS -->
+    <!-- //Custom-Files -->
+    <!-- Web-Fonts -->
+    <link href="//fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i&amp;subset=cyrillic,latin-ext,vietnamese"
+          rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=devanagari,latin-ext"
+          rel="stylesheet">
+    <!-- //Web-Fonts -->
+
+
+
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/animate.css/3.5.1/animate.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.css" integrity="sha256-He3QEBKoL/nMXlVsoM7S2C2kjFQqS5L+mgA+F8LpG+U=" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" />
     <link href="~/FontAwesome/css/all.css" rel="stylesheet">
@@ -19,10 +69,10 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark  border-bottom box-shadow mb-0" style="background-color: #1B2838;">
             <div class="container">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
-                    <img src="~/images/key.png" width="40" />
+                    <img src="~/images/keycastle.png" width="100" />
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
@@ -35,68 +85,71 @@
                         <li class="nav-item">
                             <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Team" asp-action="TeamCon">Team</a>
+                        </li>
                         @if (User.IsInRole(WC.AdminRole))
                         {
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    User's
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" asp-area="Identity" asp-page="/Account/Register">Create Admin</a>
-                                </div>
-                            </li>
-                        }
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            User's
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+
+                            <a class="dropdown-item" asp-area="Identity" asp-page="/Account/Register">Create Admin</a>
+                        </div>
+                    </li>}
                         @if (User.IsInRole(WC.AdminRole))
                         {
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Content Management
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="nav-link text-dark" asp-area="" asp-controller="Category" asp-action="CategoryCon">Category</a>
-                                    <a class="nav-link text-dark" asp-area="" asp-controller="Product" asp-action="ProductCon">Product</a>
-                                    <div class="dropdown-divider"></div>
-                                </div>
-                            </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Content Management
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Category" asp-action="CategoryCon">Category</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Product" asp-action="ProductCon">Product</a>
 
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Order Management
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" asp-area="" asp-controller="Inquiry" asp-action="InquiryCon">Order</a>
+                            <div class="dropdown-divider"></div>
+                        </div>
+                    </li>
 
-                                </div>
-                            </li>
-                        }
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Order Management
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <a class="dropdown-item" asp-area="" asp-controller="Inquiry" asp-action="InquiryCon">Order</a>
+
+                                        </div>
+                                    </li>}
                         @if (!User.IsInRole(WC.AdminRole))
                         {
-                            <li>
-                                @if (HttpContextAccessor.HttpContext.Session.Get<List<Cart>>(WC.SessionCart) != null)
-                                {
-                                    <a asp-action="CartCon" asp-controller="Cart" class="nav-link">
-                                        @{
-                                            var count = HttpContextAccessor.HttpContext.Session.Get<List<Cart>>(WC.SessionCart).Count;
-                                        }
-                                        <i class="fas fa-shopping-cart"></i> &nbsp; (@count)
-                                    </a>
-                                }
-                                else
-                                {
-                                    <a href="#" class="nav-link">
-                                        <i class="fas fa-shopping-cart"></i> &nbsp; (0)
-                                    </a>
-                                }
-                            </li>
-                        }
+
+                    <li>
+                        @if (HttpContextAccessor.HttpContext.Session.Get<List<Cart>>(WC.SessionCart) != null)
+                        {
+                    <a asp-action="CartCon" asp-controller="Cart" class="nav-link">
+                        @{ var count = HttpContextAccessor.HttpContext.Session.Get<List<Cart>>(WC.SessionCart).Count; }
+                        <i class="fas fa-shopping-cart"></i> &nbsp; (@count)
+                    </a> }
+                else
+                {
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-shopping-cart"></i> &nbsp; (0)
+                    </a>}
+                    </li>}
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
-    <div class="container mb-4 pb-4">
+    <div class="container-fluid pb-1 pl-0 pr-0 mr-0 ml-0">
         <main role="main" class="pb-5">
             @RenderBody()
+
+
         </main>
     </div>
 
@@ -105,6 +158,63 @@
             &copy; 2021 - Key Castle
         </div>
     </footer>
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="js/main.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"></script>
+
+
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+
+    <script src="~/Product_style/js/jquery-min.js"></script>
+    <script src="~/Product_style/js/tether.min.js"></script>
+    <script src="~/Product_style/js/bootstrap.min.js"></script>
+
+    <!-- Touch Swipe JS File Version - 1.6.18 -->
+    <script src="~/Product_style/js/jquery.touchSwipe.min.js"></script>
+    <!-- Paradise Slider Main JS File -->
+    <script src="~/Product_style/js/paradise_slider_min.js"></script>
+    <script src="~/Product_style/js/mixitup.min.js"></script>
+    <script src="~/Product_style/js/owl.carousel.min.js"></script>
+    <script src="~/Product_style/js/jquery.slicknav.js"></script>
+    <script src="~/Product_style/js/jquery.nav.js"></script>
+    <script src="~/Product_style/js/smooth-scroll.js"></script>
+    <script src="~/Product_style//wow.js"></script>
+    <script src="~/Product_style/js/jquery.counterup.min.js"></script>
+    <script src="~/Product_style/js/waypoints.min.js"></script>
+    <script src="~/Product_style/js/main.js"></script>
+
+    <script src="~/Login_style/js/jquery-3.3.1.min.js"></script>
+    <script src="~/Login_style/js/popper.min.js"></script>
+    <script src="~/Login_style/js/bootstrap.min.js"></script>
+    <script src="~/Login_style/js/main.js"></script>
+
+
+
+
+
+
+    <!-- smooth scrolling -->
+    <script src="~/Team&header/js/SmoothScroll.min.js"></script>
+    <!-- move-top -->
+    <script src="~/Team&header/js/move-top.js"></script>
+    <!-- easing -->
+    <script src="~/Team&header/js/easing.js"></script>
+    <!--  necessary snippets for few javascript files -->
+    @*<script src="~/Team&header/js/main.js"></script>*@
+
+    <!-- //Js files -->
+
+
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>

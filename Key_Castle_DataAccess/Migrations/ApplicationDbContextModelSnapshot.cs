@@ -390,6 +390,30 @@ namespace Key_Castle_DataAccess.Migrations
                     b.ToTable("Seller_Profile");
                 });
 
+            modelBuilder.Entity("Key_Castle_Models.Team", b =>
+                {
+                    b.Property<int>("Team_id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Fb_id")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Gmail_id")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Team_Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Team_photo")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Team_id");
+
+                    b.ToTable("Team");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
                 {
                     b.Property<string>("Id")

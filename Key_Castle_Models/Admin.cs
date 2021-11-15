@@ -8,7 +8,7 @@ namespace Key_Castle_Models
 {
     public class Admin
     {
-        [Key]
+        [System.ComponentModel.DataAnnotations.Key]
         public int Admin_id { get; set; }
         public string UserName { get; set; }
         public string Email { get; set; }

@@ -10,7 +10,7 @@ namespace Key_Castle_Models
 {
     public class InquiryDetail
     {
-        [Key]
+        [System.ComponentModel.DataAnnotations.Key]
         public int Id { get; set; }
 
         [Required]

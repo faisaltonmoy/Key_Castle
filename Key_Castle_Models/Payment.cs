@@ -9,7 +9,7 @@ namespace Key_Castle_Models
 {
     public class Payment
     {
-        [Key]
+        [System.ComponentModel.DataAnnotations.Key]
 
         public int Pay_id { get; set; }
 

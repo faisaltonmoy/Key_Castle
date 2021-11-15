@@ -22,3 +22,27 @@ E:\Github\Key_Castle\Key_Castle_Models\obj\Debug\net5.0\Key_Castle_Models.csproj
 E:\Github\Key_Castle\Key_Castle_Models\obj\Debug\net5.0\Key_Castle_Models.dll
 E:\Github\Key_Castle\Key_Castle_Models\obj\Debug\net5.0\ref\Key_Castle_Models.dll
 E:\Github\Key_Castle\Key_Castle_Models\obj\Debug\net5.0\Key_Castle_Models.pdb
+C:\Users\Atanu saha\OneDrive\Desktop\Key_Castle\Key_Castle_Models\bin\Debug\net5.0\Key_Castle_Models.deps.json
+C:\Users\Atanu saha\OneDrive\Desktop\Key_Castle\Key_Castle_Models\bin\Debug\net5.0\Key_Castle_Models.dll
+C:\Users\Atanu saha\OneDrive\Desktop\Key_Castle\Key_Castle_Models\bin\Debug\net5.0\ref\Key_Castle_Models.dll
+C:\Users\Atanu saha\OneDrive\Desktop\Key_Castle\Key_Castle_Models\bin\Debug\net5.0\Key_Castle_Models.pdb
+C:\Users\Atanu saha\OneDrive\Desktop\Key_Castle\Key_Castle_Models\obj\Debug\net5.0\Key_Castle_Models.csproj.AssemblyReference.cache
+C:\Users\Atanu saha\OneDrive\Desktop\Key_Castle\Key_Castle_Models\obj\Debug\net5.0\Key_Castle_Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Atanu saha\OneDrive\Desktop\Key_Castle\Key_Castle_Models\obj\Debug\net5.0\Key_Castle_Models.AssemblyInfoInputs.cache
+C:\Users\Atanu saha\OneDrive\Desktop\Key_Castle\Key_Castle_Models\obj\Debug\net5.0\Key_Castle_Models.AssemblyInfo.cs
+C:\Users\Atanu saha\OneDrive\Desktop\Key_Castle\Key_Castle_Models\obj\Debug\net5.0\Key_Castle_Models.csproj.CoreCompileInputs.cache
+C:\Users\Atanu saha\OneDrive\Desktop\Key_Castle\Key_Castle_Models\obj\Debug\net5.0\Key_Castle_Models.dll
+C:\Users\Atanu saha\OneDrive\Desktop\Key_Castle\Key_Castle_Models\obj\Debug\net5.0\ref\Key_Castle_Models.dll
+C:\Users\Atanu saha\OneDrive\Desktop\Key_Castle\Key_Castle_Models\obj\Debug\net5.0\Key_Castle_Models.pdb
+E:\3.2\SD Lab\Key_Castle\Key_Castle_Models\bin\Debug\net5.0\Key_Castle_Models.deps.json
+E:\3.2\SD Lab\Key_Castle\Key_Castle_Models\bin\Debug\net5.0\Key_Castle_Models.dll
+E:\3.2\SD Lab\Key_Castle\Key_Castle_Models\bin\Debug\net5.0\ref\Key_Castle_Models.dll
+E:\3.2\SD Lab\Key_Castle\Key_Castle_Models\bin\Debug\net5.0\Key_Castle_Models.pdb
+E:\3.2\SD Lab\Key_Castle\Key_Castle_Models\obj\Debug\net5.0\Key_Castle_Models.csproj.AssemblyReference.cache
+E:\3.2\SD Lab\Key_Castle\Key_Castle_Models\obj\Debug\net5.0\Key_Castle_Models.GeneratedMSBuildEditorConfig.editorconfig
+E:\3.2\SD Lab\Key_Castle\Key_Castle_Models\obj\Debug\net5.0\Key_Castle_Models.AssemblyInfoInputs.cache
+E:\3.2\SD Lab\Key_Castle\Key_Castle_Models\obj\Debug\net5.0\Key_Castle_Models.AssemblyInfo.cs
+E:\3.2\SD Lab\Key_Castle\Key_Castle_Models\obj\Debug\net5.0\Key_Castle_Models.csproj.CoreCompileInputs.cache
+E:\3.2\SD Lab\Key_Castle\Key_Castle_Models\obj\Debug\net5.0\Key_Castle_Models.dll
+E:\3.2\SD Lab\Key_Castle\Key_Castle_Models\obj\Debug\net5.0\ref\Key_Castle_Models.dll
+E:\3.2\SD Lab\Key_Castle\Key_Castle_Models\obj\Debug\net5.0\Key_Castle_Models.pdb

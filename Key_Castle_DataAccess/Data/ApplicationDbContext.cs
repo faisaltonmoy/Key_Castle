@@ -29,6 +29,7 @@ namespace Key_Castle_DataAccess
         public DbSet<AppUser> AppUser { get; set; }
         public DbSet<InquiryHeader> InquiryHeader { get; set; }
         public DbSet<InquiryDetail> InquiryDetail { get; set; }
+        public DbSet<Team> Team { get; set; }
 
     }
 }

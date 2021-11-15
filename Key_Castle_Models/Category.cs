@@ -9,7 +9,7 @@ namespace Key_Castle_Models
 {
     public class Category
     {
-        [Key]
+        [System.ComponentModel.DataAnnotations.Key]
 
         public int Category_id { get; set; }
         [Required]

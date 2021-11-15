@@ -9,7 +9,7 @@ namespace Key_Castle_Models
 {
     public class Cart
     {
-        [Key]
+        [System.ComponentModel.DataAnnotations.Key]
 
         public int Cart_id { get; set; }
 

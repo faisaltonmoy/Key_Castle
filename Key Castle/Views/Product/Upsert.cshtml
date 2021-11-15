@@ -5,7 +5,8 @@
     var title = "Create Product";
 }
 
-<form method="post" enctype="multipart/form-data">
+
+@*<form method="post" enctype="multipart/form-data">
     @if (Model.Product.Product_id != 0)
     {
         title = "Edit Product";
@@ -20,7 +21,7 @@
             <div class="col-8">
                 <div class="form-group row py-2">
                     <div class="col-4">
-                        <label asp-for="Product.Product_name">Product Name</label>
+                        <label style="color:black" asp-for="Product.Product_name">Product Name</label>
                     </div>
                     <div class="col-8">
                         <input asp-for="Product.Product_name" class="form-control" />
@@ -120,14 +121,151 @@
         </div>
     </div>
 
-</form>
+</form>*@
+
+<div class=" " style="background-image: url('https://www.wallpapertip.com/wmimgs/80-805348_game-wallpapers-hd-collection-for-free-download-gaming.jpg'); background-repeat: no-repeat;background-size:cover; background-attachment: fixed; width: 100%; height: 100%; background-size: 100%; ">
+    <div class="container-fluid h-25 " >
+        <div class="row justify-content-center">
+              
+            <div  class="col-md-6 contents pt-1" style="border-radius:10px; box-shadow: 0px 0px 10px 0px #808080;">
+                <div class="row justify-content-center">
+                    <div class="col-md-12">
+
+                        
+                            <form method="post" enctype="multipart/form-data">
+                                @if (Model.Product.Product_id != 0)
+                                {
+                                    title = "Edit Product";
+                                    <input asp-for="Product.Product_id" hidden />}
+                                <div class="border p-3 bg-white " >
+
+                                    <div class="form-group row">
+                                        <h2 class="text-info pl-3 text-center">@title</h2>
+                                    </div>
+                                    <div class="row ml-5">
+                                        <div class="col-12">
+                                            <div class="form-group row py-2">
+                                                <div class="col-4">
+                                                    <label style="color:black" asp-for="Product.Product_name">Product Name</label>
+                                                </div>
+                                                <div class="col-10">
+                                                    <input style="color:black" asp-for="Product.Product_name" class="form-control" />
+                                                    <span asp-validation-for="Product.Product_name" class="text-danger"></span>
+                                                </div>
+
+                                            </div>
+                                            <div class="form-group row py-2">
+                                                <div class="col-4">
+                                                    <label style="color:black" asp-for="Product.Qty">Quantity</label>
+                                                </div>
+                                                <div class="col-10">
+                                                    <input style="color:black" asp-for="Product.Qty" class="form-control" />
+                                                    <span asp-validation-for="Product.Qty" class="text-danger"></span>
+                                                </div>
+
+                                            </div>
+                                            <div class="form-group row py-2">
+                                                <div class="col-4">
+                                                    <label style="color:black" asp-for="Product.Price"></label>
+                                                </div>
+                                                <div class="col-10">
+                                                    <input style="color:black" asp-for="Product.Price" class="form-control" />
+                                                    <span asp-validation-for="Product.Price" class="text-danger"></span>
+                                                </div>
+
+                                            </div>
+                                            <div class="form-group row py-2">
+                                                <div class="col-10">
+                                                    <label style="color:black" asp-for="Product.Short_Desc">Short Description</label>
+                                                </div>
+                                                <div class="col-10">
+                                                    <input style="color:black" asp-for="Product.Short_Desc" class="form-control" />
+                                                    <span asp-validation-for="Product.Short_Desc" class="text-danger"></span>
+                                                </div>
+
+                                            </div>
+                                            <div class="form-group row py-2">
+                                                <div style="color:black" class="col-4">
+                                                    <label asp-for="Product.Desc">Description</label>
+                                                </div>
+                                                <div style="color:black" class="col-10">
+                                                    <textarea style="color:black" asp-for="Product.Desc" class="form-control summernote text-dark"></textarea>
+                                                    <span asp-validation-for="Product.Desc" class="text-danger"></span>
+                                                </div>
+
+                                            </div>
+                                            <div style="color:black" class="form-group row py-2">
+                                                <div class="col-4">
+                                                    Image
+                                                </div>
+                                                <div style="color:black" class="col-10">
+                                                    <input type="file" name="files" id="uploadBox" multiple class="form-select" />
+                                                </div>
+
+                                            </div>
+                                            <div class="col-4 ml-5">
+                                                @if (Model.Product.Product_id != 0)
+                                                {
+                                                  <img src="@WC.ImagePath@Model.Product.Product_photo" class="w-100" style="border-radius:5px; border:1px solid #bbb" />}
+                                            </div>
+                                            <div class="form-group row py-2">
+                                                <div class="col-4">
+                                                    <label style="color:black" asp-for="Product.Category_id"></label>
+                                                </div>
+                                                <div class="col-10">
+                                                    <select asp-for="Product.Category_id" asp-items="@Model.CategorySelectList" class="form-select">
+                                                        <option disabled selected>--Select Category--</option>
+                                                    </select>
+                                                    <span asp-validation-for="Product.Category_id" class="text-danger"></span>
+                                                </div>
+
+                                            </div>
+                                            <div class="form-group row py-2 ml-0 ">
+                                                <div class="col-10  row ">
+
+                                                    <div class="col ">
+                                                        @if (Model.Product.Product_id != 0)
+                                                        {
+                                                            //update
+                                            <input type="submit" class="btn btn-info w-100 " value="Update" /> }
+                                        else
+                                        {
+                                            //create
+                                        <input type="submit" onclick="return validateInput()" class="btn btn-primary w-100" value="Create" />}
+
+                                                    </div>
+                                                    <div class="col">
+                                                        <a asp-action="ProductCon" class="btn btn-success w-100"><i class="fas fa-sign-out-alt"></i> Back</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                      
+                                    </div>
+                                </div>
+
+                            </form>
+                       
+                    </div>
+                   
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
 
 @section Scripts{
 
     <script>
         $(document).ready(function () {
             $('.summernote').summernote({
-                height: 250
+                height: 250,
+                
             });
         });
         function validateInput() {

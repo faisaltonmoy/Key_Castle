@@ -10,7 +10,7 @@ namespace Key_Castle_Models
 {
     public class Buyer_Profile
     {
-        [Key]
+        [System.ComponentModel.DataAnnotations.Key]
         public int Buyer_pro_id { get; set; }
 
         public string FullName { get; set; }
